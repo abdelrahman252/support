@@ -5,17 +5,17 @@ import SupportWindow from "./supportWindow/SupportWindow";
 
 
 const SupportEngine = () => {
-    const ref=useRef(null);
-    const [visible,setVisibile] =useState(false);
+    const ref = useRef(null);
+    const [visible, setVisibile] = useState(false);
     useEffect(() => {
         function handleClickOutside(event) {
-            if(ref.current && !ref.current.contains(event.target)) {
+            if (ref.current && !ref.current.contains(event.target)) {
                 setVisibile(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
-        return()=>{
-            document.removeEventListener("mousedown", handleClickOutside);        
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
         }
     })
 
@@ -23,17 +23,17 @@ const SupportEngine = () => {
         <div ref={ref}>
             <SupportWindow
 
-            visible={visible}
+                visible={visible}
             />
 
-            <Avatar 
-            
-            onClick={() => setVisibile(true)}
-            style={{
-                position: 'fixed', bottom:'24px',right: '24px'
+            <Avatar
 
-            }}
-            
+                onClick={() => setVisibile(true)}
+                style={{
+                    position: 'fixed', bottom: '24px', right: '24px',
+
+                }}
+
             />
         </div>
     )
