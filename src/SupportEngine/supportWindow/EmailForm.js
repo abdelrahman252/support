@@ -3,7 +3,7 @@ import Avatar from '../Avatar';
 import { styles } from '../styles'
 import { LoadingOutlined} from '@ant-design/icons';
 
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 const EmailForm = (props) => {
 
 
